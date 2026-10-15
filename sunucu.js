@@ -50,6 +50,25 @@ const sunucu = http.createServer((istek, yanit) => {
 </body>
 </html>`);
 
+  // Hakkımda sayfası: "/hakkimda"
+  } else if (istek.url === "/hakkimda") {
+    // Kendimi tanıttığım kısa bir HTML sayfası gönderiyoruz.
+    yanit.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    yanit.end(`<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Hakkımda</title>
+</head>
+<body>
+  <h1>Hakkımda</h1>
+  <p>Merhaba, ben Sevgi Merve Doğan.</p>
+  <p>[Üniversiten ve bölümün, kaçıncı sınıf olduğun]</p>
+  <p>[İlgi alanların ya da bu dersten beklentin, 1-2 cümle]</p>
+  <p><a href="/">Ana sayfaya dön</a></p>
+</body>
+</html>`);
+
   // Ders bilgisi: "/api/ders"
   } else if (istek.url === "/api/ders") {
     // Göndereceğimiz veriyi bir JavaScript nesnesi olarak hazırlıyoruz.
