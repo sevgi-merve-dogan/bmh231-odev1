@@ -45,7 +45,7 @@ const sunucu = http.createServer((istek, yanit) => {
   <title>BMH231 Ödev 1</title>
 </head>
 <body>
-  <h1>BMH231 Web Sunucusu - Ana Sayfa</h1>
+  <h1>Sevgi Merve Doğan - Node.js Web Sunucusu</h1>
   <p><a href="/hakkimda">Hakkımda</a></p>
 </body>
 </html>`);
