@@ -14,7 +14,7 @@ Sunucu birkaç sabit yola yanıt verir, AGEP son teslim tarihine kalan gün say�
 ## Kurulum ve çalıştırma
 
 ```bash
-git clone https://github.com/KULLANICI_ADIN/bmh231-odev1.git
+git clone https://github.com/sevgi-merve-dogan/bmh231-odev1.git
 cd bmh231-odev1
 npm install
 npm start
