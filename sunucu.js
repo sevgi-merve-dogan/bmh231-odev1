@@ -16,6 +16,18 @@ const sunucu = http.createServer((istek, yanit) => {
   // Gelen her isteğin yöntemini (GET, POST...) ve yolunu (/, /api/ders...) uçbirime yazıyoruz.
   console.log(istek.method, istek.url);
 
+  // GET dışındaki yöntemler (POST, PUT, DELETE...) desteklenmiyor.
+  // 405 = yöntem bu kaynak için izinli değil.
+  // Allow başlığı, istemciye hangi yöntemlerin kullanılabileceğini bildirir.
+  if (istek.method !== "GET") {
+    yanit.writeHead(405, {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Allow": "GET"
+    });
+    yanit.end("Bu yönteme izin verilmiyor");
+    return; // Cevap gönderildi; aşağıdaki yol kontrollerine geçilmesin.
+  }
+
   // Ana sayfa: "/"
   if (istek.url === "/") {
     // 200 = istek başarılı.
