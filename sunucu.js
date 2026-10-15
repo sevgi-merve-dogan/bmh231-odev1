@@ -63,8 +63,8 @@ const sunucu = http.createServer((istek, yanit) => {
 <body>
   <h1>Hakkımda</h1>
   <p>Merhaba, ben Sevgi Merve Doğan.</p>
-  <p>[Üniversiten ve bölümün, kaçıncı sınıf olduğun]</p>
-  <p>[İlgi alanların ya da bu dersten beklentin, 1-2 cümle]</p>
+  <p>Yozgat Bozok Üniversitesi Bilgisayar Mühendisliği Bölümü 2. sınıf öğrencisiyim.</p>
+  <p>Web teknolojilerinin nasıl çalıştığını öğrenmeyi ve bu derste kendi web uygulamalarımı geliştirmeyi hedefliyorum.</p>
   <p><a href="/">Ana sayfaya dön</a></p>
 </body>
 </html>`);
