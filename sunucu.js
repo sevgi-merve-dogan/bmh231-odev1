@@ -34,6 +34,23 @@ const sunucu = http.createServer((istek, yanit) => {
   <p><a href="/hakkimda">Hakkımda</a></p>
 </body>
 </html>`);
+
+  // Ders bilgisi: "/api/ders"
+  } else if (istek.url === "/api/ders") {
+    // Göndereceğimiz veriyi bir JavaScript nesnesi olarak hazırlıyoruz.
+    const ders = {
+      kod: "BMH231",
+      ad: "Web Programlama",
+      gun: "Cuma"
+    };
+
+    // Cevap JSON olduğu için Content-Type application/json.
+    yanit.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
+
+    // JSON.stringify nesneyi JSON metnine çevirir.
+    // HTTP üzerinden nesne değil, metin gönderilebilir.
+    yanit.end(JSON.stringify(ders));
+
   } else {
     // Tanımadığımız bütün yollar için:
     // 404 = istenen kaynak sunucuda yok.
